@@ -36,19 +36,19 @@ function create_config( )
 	io.write('\n\27[1;33mادخل ايدي حسابك لتصبح مطور 👇 \27[0;39;49m\n')
 	local SUDO = tonumber(io.read())
 if not tostring(SUDO):match('%d+') then
-    SUDO = 352568466
+    SUDO = 776008296
   end
   	io.write('\n\27[1;33mارسل توكن البوت الان 👇 \27[0;39;49m\n')
 	local token = io.read()
 	 	io.write('\n\27[1;33mادخل الان اسم البوت الذي تريده 👇 \27[0;39;49m\n')
 	local botname = io.read()
 	if botname =="" then
-  botname = "فير"
+  botname = "snik"
 end
 	 	io.write('\n\27[1;33mادخل معرف المطور 👇 \27[0;39;49m\n')
 	local sudouser = io.read()
 	if sudouser =="" then
-  sudouser = "@blcon"
+  sudouser = "@Q2O10"
 end
 
 
@@ -62,16 +62,17 @@ end
     "banhammer",
     "replay",
     "zhrf",
+    "games",
     },
-    sudo_users = {352568466, SUDO},--Sudo users
+    sudo_users = {776008296, SUDO},--Sudo users
     master_id = SUDO, 
     token_bot = token, 
     botname = botname, 
     sudouser = sudouser, 
     moderation = {data = './data/moderation.json'},
-    info_text = [[💢|  ωєℓcσмє му ∂єαя
-💢| νєятσкєη ѵ3
-💢| ժҽѵ ]]..sudouser..[[
+    info_text = [[💢|  snik
+💢| snik ѵ1
+💢| Dev ]]..sudouser..[[
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -124,7 +125,7 @@ function bot_run()
 		bot = send_req(send_api.."/getMe")
 	end
 	bot = bot.result
-	local runlog = "💢¦ تم تشغيل السيرفر \n💢¦ معرف بوتك : @"..bot.username.."\n💢¦ يعمل ع سورس فير توكن اصدار  v3 💯\n💢¦ تابع قناة السورس @verxbot"
+	local runlog = "💢¦ تم تشغيل السيرفر \n💢¦ معرف بوتك : @"..bot.username.."\n💢¦ يعمل ع سورس فير توكن اصدار  v3 💯\n💢¦ تابع قناة السورس @Q2O10"
 	print(runlog.."\n┇-----------------------------------")
 	send_msg(sudo_id, runlog)
 	last_update = last_update or 0
